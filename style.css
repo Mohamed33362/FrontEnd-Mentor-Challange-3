@@ -1,0 +1,162 @@
+/* start global rules */
+
+/* all Variables */
+:root{
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+    --fontsize: 15px;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* local font  */
+@font-face {
+    font-family: "overpass-B";
+    src: url(fonts/Overpass-Bold.ttf);
+}
+
+@font-face {
+    font-family: "overpass-R";
+    src: url(fonts/Overpass-Regular.ttf);
+}
+
+/* list style */
+ul{
+    list-style: none;
+}
+
+body{
+    background-color: var(--VeryDarkBlue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* end global rules */
+
+/* card style */
+.card{
+    background-color: var(--DarkBlue);
+    width: 50%;
+    padding: 2rem;
+    border-radius: 35px;
+    margin: auto;
+}
+/* img style */
+.card img{
+    background-color: var(--VeryDarkBlue);
+    padding: 15px;
+    clip-path: circle();
+    margin: 20px 0;
+}
+/* ul display to get it beside each other */
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+/* style li */
+ul li{
+    background-color: var(--VeryDarkBlue);
+    padding: 20px;
+    color: var(--MediumGrey);
+    clip-path: circle();
+    font-family: "overpass-R";
+    cursor: pointer;
+}
+
+li:hover{
+    background-color: var(--Orange);
+    color: white;
+}
+/* style head line */
+h1{
+    color: var(--White);
+    font-family: "overpass-B";
+    margin: 20px 0;
+}
+/* style paragraph */
+.card p{
+    color: var(--LightGrey);
+    font-family: "overpass-R";
+    margin: 20px 0;
+}
+/* style button */
+button{
+    width: 100%;
+        background: var(--Orange);
+        border: none;
+        outline: none;
+        padding: 10px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        color: var(--White);
+        cursor: pointer;
+        font-family: "overpass-R";
+}
+button:hover{
+    color: var(--Orange);
+    background-color: var(--White);
+}
+
+/* start thank you section */
+
+#thanku{
+    display: none;
+}
+
+.thanku{
+    text-align: center;
+}
+
+.thanku img{
+    background: none !important;
+    padding: 0 !important;
+    clip-path: none !important;
+    margin: 20px 0 !important;
+}
+
+small{
+    display: block;
+    background-color: var(--VeryDarkBlue);
+    color: var(--Orange);
+    padding: 15px;
+    border-radius: 30px;
+    font-family: "overpass-R";
+    width: fit-content;
+    margin: 20px auto;
+}
+
+h2{
+    color: var(--White);
+    font-family: "overpass-B";
+}
+
+/* end thank you section */
+
+/* javascript classes */
+
+.active{
+    background-color: var(--LightGrey);
+    color: var(--White);
+}
+
+/* media query */
+
+@media (max-width:575.98px) {
+    .card{
+        width: 100% !important;
+    }
+    main{
+        padding: 1rem;
+    }
+}
